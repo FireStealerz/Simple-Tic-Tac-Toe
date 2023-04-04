@@ -52,7 +52,7 @@ fun main() {
         //sanitizing input
         if (coordinateA.toDoubleOrNull() == null || coordinateB.toDoubleOrNull() == null) {
             println("You should enter numbers!")
-        } else if (coordinateA.toInt() in 1..3 || coordinateB.toInt() in 1..3) {
+        } else if (coordinateA.toInt() !in 1..3 || coordinateB.toInt() !in 1..3) {
             println("Coordinates should be from 1 to 3!")
         } else if (gameField[coordinateA.toInt() - 1][coordinateB.toInt() - 1] != " ") {
             println("This cell is occupied! Choose another one!")
